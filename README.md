@@ -44,66 +44,66 @@ Construction et analyse d'un **portefeuille optimisé** composé de **10 actions
 ## 📊 Graphiques
 
 ### 1. Taux sans risque (Obligations UK 10 ans)
-![Taux sans risque](figures/fig1_rf.png)
+![Taux sans risque](fig1_rf.png)
 
 ---
 
 ### 2. Évolution des cours (base 100)
-![Évolution des cours](figures/fig2_cours.png)
+![Évolution des cours](fig2_cours.png)
 
 ---
 
 ### 3. Profil Rendement / Risque
-![Profil Rendement Risque](figures/fig3_profil.png)
+![Profil Rendement Risque](fig3_profil.png)
 
 ---
 
 ### 4. Matrice de corrélation
-![Matrice de corrélation](figures/fig4_corr.png)
+![Matrice de corrélation](fig4_corr.png)
 
 ---
 
 ### 5. Frontière efficiente de Markowitz
-![Frontière efficiente](figures/fig5_frontiere.png)
+![Frontière efficiente](fig5_frontiere.png)
 
 > ⭐ Le point rouge indique le **Portefeuille à Variance Minimale (PMin)** — portefeuille retenu.
 
 ---
 
 ### 6. Bêtas et R² — Modèle de Sharpe
-![Bêtas et R2](figures/fig6_beta_r2.png)
+![Bêtas et R2](fig6_beta_r2.png)
 
 ---
 
 ### 7. Régression Diageo (DGE) sur FTSE 100
-![Régression Diageo](figures/fig7_reg_diageo.png)
+![Régression Diageo](fig7_reg_diageo.png)
 
 ---
 
 ### 8. Régression Rentokil (RTO) sur FTSE 100
-![Régression Rentokil](figures/fig8_reg_rentokil.png)
+![Régression Rentokil](fig8_reg_rentokil.png)
 
 ---
 
 ### 9. Composition du portefeuille optimal (Elton-Gruber)
-![Composition portefeuille](figures/fig9_pie.png)
+![Composition portefeuille](fig9_pie.png)
 
 > Seuil optimal C* = 0,054 → **RTO (85,13%)** + **DGE (14,87%)**
 
 ---
 
 ### 10. NAV — Performance historique (2013–2022)
-![NAV Performance](figures/fig10_nav.png)
+![NAV Performance](fig10_nav.png)
 
 ---
 
 ### 11. Drawdown du portefeuille PMin
-![Drawdown](figures/fig11_drawdown.png)
+![Drawdown](fig11_drawdown.png)
 
 ---
 
 ### 12. Suivi de performance — Mars 2026
-![Mars 2026](figures/fig12_mars2026.png)
+![Mars 2026](fig12_mars2026.png)
 
 ---
 
