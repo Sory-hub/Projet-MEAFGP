@@ -20,35 +20,45 @@ Construction et analyse d'un **portefeuille optimisé** composé de **10 actions
 | `Rapport_MEAFGP_V2_FINAL.pdf` | Rapport académique complet (16 pages) |
 | `Presentation_MEAFGP_2026.pptx` | Présentation PowerPoint (13 diapositives) |
 | `Descriptif_Projet_MEAFGP.docx` | Descriptif du projet |
-| `figures/` | 12 graphiques exportés en PNG |
 
 ---
 
-## 📈 Les 10 actions étudiées
+## 📈 Les 10 actions étudiées (FTSE 100)
 
 | Ticker | Entreprise | Secteur |
 |---|---|---|
 | NWG | NatWest Group | Banque & Finance |
+| PHNX | Phoenix Group | Assurance |
 | DGE | Diageo | Boissons & Alcools |
-| GLEN | Glencore | Matières premières |
+| ABF | Associated British Foods | Agroalimentaire |
+| IMB | Imperial Brands | Tabac |
+| RR | Rolls-Royce Holdings | Aérospatiale |
 | RTO | Rentokil Initial | Services aux entreprises |
-| AZN | AstraZeneca | Pharmacie & Biotech |
-| GSK | GlaxoSmithKline | Santé & Pharmacie |
-| SHEL | Shell | Énergie — Pétrole & Gaz |
-| BATS | British American Tobacco | Tabac |
-| NG | National Grid | Énergie — Utilities |
-| LSEG | London Stock Exchange Group | Services financiers |
+| GLEN | Glencore | Matières premières |
+| BDEV | Barratt Developments | Immobilier |
+| KGF | Kingfisher | Distribution |
+
+---
+
+## 🔬 Méthodologie
+
+Le projet repose sur quatre étapes :
+
+1. **Statistiques descriptives** — rendements, volatilité, corrélations
+2. **Modèle de Markowitz** — frontière efficiente, portefeuille à variance minimale (PMin)
+3. **Modèle de Sharpe** — régression sur FTSE 100, bêtas et alphas
+4. **Méthode Elton-Gruber (C\*)** — sélection optimale par ratio de Treynor
 
 ---
 
 ## 📊 Graphiques
 
-### 1. Taux sans risque (Obligations UK 10 ans)
+### 1. Taux sans risque — UK Gilt 10 ans
 ![Taux sans risque](fig1_rf.png)
 
 ---
 
-### 2. Évolution des cours (base 100)
+### 2. Évolution des cours (base 100 — 2013–2022)
 ![Évolution des cours](fig2_cours.png)
 
 ---
@@ -88,16 +98,16 @@ Construction et analyse d'un **portefeuille optimisé** composé de **10 actions
 ### 9. Composition du portefeuille optimal (Elton-Gruber)
 ![Composition portefeuille](fig9_pie.png)
 
-> Seuil optimal C* = 0,054 → **RTO (85,13%)** + **DGE (14,87%)**
+> Seuil optimal **C\* = 0,054** — Poids positifs uniquement affichés
 
 ---
 
-### 10. NAV — Performance historique (2013–2022)
+### 10. NAV — Valeur liquidative historique (2013–2022)
 ![NAV Performance](fig10_nav.png)
 
 ---
 
-### 11. Drawdown du portefeuille PMin
+### 11. Drawdown des portefeuilles
 ![Drawdown](fig11_drawdown.png)
 
 ---
@@ -109,13 +119,13 @@ Construction et analyse d'un **portefeuille optimisé** composé de **10 actions
 
 ## 🏆 Résultats clés
 
-| Portefeuille | Performance mars 2026 | Vs marché |
-|---|---|---|
-| FTSE 100 | -5,95% | Référence |
-| **PMin (Markowitz)** | **-2,87%** | **+3,08 pts** |
-| Sharpe Optimal (Elton-Gruber) | -3,40% | +2,55 pts |
+| Portefeuille | Rendement annualisé | Volatilité | Performance mars 2026 |
+|---|---|---|---|
+| FTSE 100 (benchmark) | +2,10% | 15,96% | **−5,95%** |
+| PMin Markowitz | +5,27% | 15,54% | **−2,87%** |
+| PMin Sharpe | +5,68% | 15,97% | **−3,40%** |
 
-> En période de stress (mars 2026), le portefeuille PMin a perdu **2 fois moins** que le marché, validant l'approche de Markowitz.
+> En mars 2026, le portefeuille PMin Markowitz a perdu **2 fois moins** que le marché, validant l'efficacité de l'optimisation de Markowitz en période de stress.
 
 ---
 
@@ -123,9 +133,9 @@ Construction et analyse d'un **portefeuille optimisé** composé de **10 actions
 
 - **Microsoft Excel** — Solver, Analyse ToolPak, régressions
 - **Python** — pandas, numpy, matplotlib
-- **LaTeX** — rédaction du rapport (pdflatex)
-- **PowerPoint** — présentation orale
+- **LaTeX** — rédaction du rapport (pdflatex, 16 pages)
+- **PowerPoint** — présentation orale (13 diapositives)
 
 ---
 
-*Projet réalisé dans le cadre du cours de Gestion de Portefeuille — Master 1 MBFA — Sorbonne Paris Nord — 2025/2026*
+*Projet réalisé dans le cadre du cours de Gestion de Portefeuille — Master 1 MBFA — Université Sorbonne Paris Nord — 2025/2026*
