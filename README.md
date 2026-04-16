@@ -2,25 +2,25 @@
 
 **Université Sorbonne Paris Nord — Master 1 MBFA**
 **Module : Méthodes et Applications en Finance et Gestion de Portefeuille**
-**Année académique : 2025–2026**
+**Année académique : 2025–2026 | Auteur : TRAORE**
 
 ---
 
 ## 🎯 Objectif du projet
 
-Ce projet consiste à construire et analyser un **portefeuille optimisé** composé de **10 actions britanniques du FTSE 100**, sur la période **2013–2022**, en appliquant les modèles classiques de la théorie moderne du portefeuille.
-
-Un suivi de performance sur le **mois de mars 2026** vient compléter l'analyse historique.
+Construction et analyse d'un **portefeuille optimisé** composé de **10 actions britanniques du FTSE 100**, sur la période **2013–2022**, en appliquant les modèles classiques de la théorie moderne du portefeuille (Markowitz, Sharpe, Elton-Gruber). Un suivi de performance sur **mars 2026** complète l'analyse.
 
 ---
 
-## 📁 Contenu du dépôt
+## 📁 Fichiers du dépôt
 
 | Fichier | Description |
 |---|---|
-| `Projet_MEAFGP_CORRIGE.xlsx` | Fichier Excel complet : données, statistiques, Markowitz, Sharpe, performances |
+| `Projet_MEAFGP.xlsx` | Données, statistiques, Markowitz, Sharpe, performances |
 | `Rapport_MEAFGP_V2_FINAL.pdf` | Rapport académique complet (16 pages) |
 | `Presentation_MEAFGP_2026.pptx` | Présentation PowerPoint (13 diapositives) |
+| `Descriptif_Projet_MEAFGP.docx` | Descriptif du projet |
+| `figures/` | 12 graphiques exportés en PNG |
 
 ---
 
@@ -28,80 +28,104 @@ Un suivi de performance sur le **mois de mars 2026** vient compléter l'analyse 
 
 | Ticker | Entreprise | Secteur |
 |---|---|---|
-| SHEL | Shell | Énergie (pétrole & gaz) |
-| GSK | GlaxoSmithKline | Santé & Pharmacie |
+| NWG | NatWest Group | Banque & Finance |
 | DGE | Diageo | Boissons & Alcools |
 | GLEN | Glencore | Matières premières |
-| NWG | NatWest Group | Banque & Finance |
-| AZN | AstraZeneca | Pharmacie & Biotech |
-| BATS | British American Tobacco | Tabac |
 | RTO | Rentokil Initial | Services aux entreprises |
-| NG | National Grid | Énergie (utilities) |
+| AZN | AstraZeneca | Pharmacie & Biotech |
+| GSK | GlaxoSmithKline | Santé & Pharmacie |
+| SHEL | Shell | Énergie — Pétrole & Gaz |
+| BATS | British American Tobacco | Tabac |
+| NG | National Grid | Énergie — Utilities |
 | LSEG | London Stock Exchange Group | Services financiers |
 
 ---
 
-## 🔬 Méthodologie
+## 📊 Graphiques
 
-### 1. Statistiques descriptives
-- Rendements journaliers, annualisés
-- Volatilité, asymétrie, kurtosis
-- Matrice de corrélation
-
-### 2. Modèle de Markowitz
-- Construction de la **frontière efficiente**
-- Identification du **portefeuille à variance minimale (PMin)**
-- Calcul via l'optimisation Lagrangienne : `w* = λΩ⁻¹1 + γΩ⁻¹μ`
-
-### 3. Modèle de Sharpe (modèle de marché)
-- Régression de chaque action sur le FTSE 100
-- Estimation des **bêtas** (risque systématique) et **alphas**
-- Rapport ToolPak complet (ANOVA, IC 95%)
-
-### 4. Sélection par la méthode Elton-Gruber (C*)
-- Classement par **ratio de Treynor**
-- Calcul du seuil optimal **C* = 0,054**
-- Portefeuille retenu : **RTO (85,13%)** + **DGE (14,87%)**
-
-### 5. Analyse des performances historiques
-- NAV base 100 sur 2013–2022
-- Rendement annualisé, volatilité, **ratio de Sharpe**
-- Drawdown maximum
-
-### 6. Suivi mars 2026
-- Comparaison hebdomadaire : FTSE 100 vs PMin vs Portefeuille Sharpe Optimal
-- Résultat : FTSE **-5,95%** | PMin **-2,87%** | Sharpe Opt. **-3,40%**
+### 1. Taux sans risque (Obligations UK 10 ans)
+![Taux sans risque](figures/fig1_rf.png)
 
 ---
 
-## 📊 Résultats clés
+### 2. Évolution des cours (base 100)
+![Évolution des cours](figures/fig2_cours.png)
 
-> Le portefeuille à variance minimale (PMin) a surperformé le marché en période de stress :
-> **-2,87%** contre **-5,95%** pour le FTSE 100 en mars 2026.
+---
 
-| Portefeuille | Rendement mars 2026 | Volatilité historique |
+### 3. Profil Rendement / Risque
+![Profil Rendement Risque](figures/fig3_profil.png)
+
+---
+
+### 4. Matrice de corrélation
+![Matrice de corrélation](figures/fig4_corr.png)
+
+---
+
+### 5. Frontière efficiente de Markowitz
+![Frontière efficiente](figures/fig5_frontiere.png)
+
+> ⭐ Le point rouge indique le **Portefeuille à Variance Minimale (PMin)** — portefeuille retenu.
+
+---
+
+### 6. Bêtas et R² — Modèle de Sharpe
+![Bêtas et R2](figures/fig6_beta_r2.png)
+
+---
+
+### 7. Régression Diageo (DGE) sur FTSE 100
+![Régression Diageo](figures/fig7_reg_diageo.png)
+
+---
+
+### 8. Régression Rentokil (RTO) sur FTSE 100
+![Régression Rentokil](figures/fig8_reg_rentokil.png)
+
+---
+
+### 9. Composition du portefeuille optimal (Elton-Gruber)
+![Composition portefeuille](figures/fig9_pie.png)
+
+> Seuil optimal C* = 0,054 → **RTO (85,13%)** + **DGE (14,87%)**
+
+---
+
+### 10. NAV — Performance historique (2013–2022)
+![NAV Performance](figures/fig10_nav.png)
+
+---
+
+### 11. Drawdown du portefeuille PMin
+![Drawdown](figures/fig11_drawdown.png)
+
+---
+
+### 12. Suivi de performance — Mars 2026
+![Mars 2026](figures/fig12_mars2026.png)
+
+---
+
+## 🏆 Résultats clés
+
+| Portefeuille | Performance mars 2026 | Vs marché |
 |---|---|---|
-| FTSE 100 | -5,95% | — |
-| PMin (Markowitz) | **-2,87%** | Minimale |
-| Sharpe Optimal (Elton-Gruber) | -3,40% | Modérée |
+| FTSE 100 | -5,95% | Référence |
+| **PMin (Markowitz)** | **-2,87%** | **+3,08 pts** |
+| Sharpe Optimal (Elton-Gruber) | -3,40% | +2,55 pts |
+
+> En période de stress (mars 2026), le portefeuille PMin a perdu **2 fois moins** que le marché, validant l'approche de Markowitz.
 
 ---
 
 ## 🛠️ Outils utilisés
 
-- **Microsoft Excel** (Solver, Analyse ToolPak, régressions)
-- **Python** (pandas, numpy, matplotlib, scipy)
-- **LaTeX** (rédaction du rapport académique)
-- **PowerPoint** (présentation orale)
+- **Microsoft Excel** — Solver, Analyse ToolPak, régressions
+- **Python** — pandas, numpy, matplotlib
+- **LaTeX** — rédaction du rapport (pdflatex)
+- **PowerPoint** — présentation orale
 
 ---
 
-## 👤 Auteur
-
-**TRAORE**
-Master 1 MBFA — Université Sorbonne Paris Nord
-Contact : tsory728@gmail.com
-
----
-
-*Projet réalisé dans le cadre du cours de Gestion de Portefeuille — 2025/2026*
+*Projet réalisé dans le cadre du cours de Gestion de Portefeuille — Master 1 MBFA — Sorbonne Paris Nord — 2025/2026*
